@@ -6,9 +6,11 @@
 # 
 import numpy as np
 import wrapper
+import cv2
 
-
-# instantiate a Python array that'll be sent to C++ and C
-b = np.ones(10)*3
-wrapper.display(b)  # example function that displays the array
+batchImageData = np.zeros((1, 360, 640, 3), dtype=int)
+img = cv2.imread('1555.jpg')
+batchImageData[0,:,:] = img[:,:]
+print batchImageData.shape
+wrapper.display(batchImageData)
 

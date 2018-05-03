@@ -5,7 +5,7 @@
 extern "C"{
 #endif
 
-void loop_array(double *array, int N);
+void loop_array(unsigned char *array, int, int, int, int, int, int, int, int);
 
 #ifdef __cplusplus
 }
